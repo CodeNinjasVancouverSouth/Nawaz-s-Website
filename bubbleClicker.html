@@ -1,0 +1,41 @@
+<script>
+    let points = 0;
+
+    function move() {
+        document.getElementById("target").style.top =  Math.floor(Math.random() * 90) + "%"
+
+        document.getElementById("target").style.right =  Math.floor(Math.random() * 90) + "%"
+
+        points += 1;
+        document.getElementById("counter").innerHTML = points;  
+    }
+</script>
+
+<h1 id="counter"></h1>
+
+<button id="target" onclick="move()"></button>
+
+<style>
+    body {
+        margin: 0;
+        background-color: rgb(53, 53, 53);
+        max-height: 100vh;
+        position: relative;
+        text-align: center;
+    }
+
+    button {
+        height: 3em;
+        width: 3em;
+        border-radius: 100%;
+        top: 50%;
+        border: none;
+        background-color: aqua;
+        position: absolute;
+    }
+
+    h1 {
+        margin: auto;
+        color: white;
+    }
+</style>
